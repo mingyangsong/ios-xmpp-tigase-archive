@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7732A349-195A-4CB2-8F89-003D56314CF3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ios-xmpp-tigase-archive</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>407307EE-1E0B-4D63-942E-7DCAB624A6EF</key>
+		<string>ssh://bitbucket.org/carbonhire/ios-xmpp-tigase-archive.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios-xmpp-tigase-archive.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>407307EE-1E0B-4D63-942E-7DCAB624A6EF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://bitbucket.org/carbonhire/ios-xmpp-tigase-archive.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>407307EE-1E0B-4D63-942E-7DCAB624A6EF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>407307EE-1E0B-4D63-942E-7DCAB624A6EF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios-xmpp-tigase-archive</string>
+		</dict>
+	</array>
+</dict>
+</plist>

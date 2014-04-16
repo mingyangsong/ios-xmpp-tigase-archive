@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1200B99718FF2F8200359055"
+               BlueprintIdentifier = "1293FFA718FF435100681833"
                BuildableName = "ios-xmpp-tigase-archive.app"
                BlueprintName = "ios-xmpp-tigase-archive"
                ReferencedContainer = "container:ios-xmpp-tigase-archive.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1200B9B218FF2F8300359055"
+               BlueprintIdentifier = "1293FFC218FF435100681833"
                BuildableName = "ios-xmpp-tigase-archiveTests.xctest"
                BlueprintName = "ios-xmpp-tigase-archiveTests"
                ReferencedContainer = "container:ios-xmpp-tigase-archive.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1200B99718FF2F8200359055"
+            BlueprintIdentifier = "1293FFA718FF435100681833"
             BuildableName = "ios-xmpp-tigase-archive.app"
             BlueprintName = "ios-xmpp-tigase-archive"
             ReferencedContainer = "container:ios-xmpp-tigase-archive.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1200B99718FF2F8200359055"
+            BlueprintIdentifier = "1293FFA718FF435100681833"
             BuildableName = "ios-xmpp-tigase-archive.app"
             BlueprintName = "ios-xmpp-tigase-archive"
             ReferencedContainer = "container:ios-xmpp-tigase-archive.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1200B99718FF2F8200359055"
+            BlueprintIdentifier = "1293FFA718FF435100681833"
             BuildableName = "ios-xmpp-tigase-archive.app"
             BlueprintName = "ios-xmpp-tigase-archive"
             ReferencedContainer = "container:ios-xmpp-tigase-archive.xcodeproj">
