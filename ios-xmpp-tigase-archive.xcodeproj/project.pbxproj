@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1200B99C18FF2F8200359055 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1200B99B18FF2F8200359055 /* Foundation.framework */; };
+		1200B99E18FF2F8200359055 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1200B99D18FF2F8200359055 /* CoreGraphics.framework */; };
+		1200B9A018FF2F8200359055 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1200B99F18FF2F8200359055 /* UIKit.framework */; };
+		1200B9A618FF2F8200359055 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1200B9A418FF2F8200359055 /* InfoPlist.strings */; };
+		1200B9A818FF2F8200359055 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1200B9A718FF2F8200359055 /* main.m */; };
+		1200B9AC18FF2F8200359055 /* SRMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1200B9AB18FF2F8200359055 /* SRMAppDelegate.m */; };
+		1200B9AE18FF2F8200359055 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1200B9AD18FF2F8200359055 /* Images.xcassets */; };
+		1200B9B518FF2F8300359055 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1200B9B418FF2F8300359055 /* XCTest.framework */; };
+		1200B9B618FF2F8300359055 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1200B99B18FF2F8200359055 /* Foundation.framework */; };
+		1200B9B718FF2F8300359055 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1200B99F18FF2F8200359055 /* UIKit.framework */; };
+		1200B9BF18FF2F8300359055 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1200B9BD18FF2F8300359055 /* InfoPlist.strings */; };
+		1200B9C118FF2F8300359055 /* ios_xmpp_tigase_archiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1200B9C018FF2F8300359055 /* ios_xmpp_tigase_archiveTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1200B9B818FF2F8300359055 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1200B99018FF2F8200359055 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1200B99718FF2F8200359055;
+			remoteInfo = "ios-xmpp-tigase-archive";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1200B99818FF2F8200359055 /* ios-xmpp-tigase-archive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-xmpp-tigase-archive.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1200B99B18FF2F8200359055 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1200B99D18FF2F8200359055 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1200B99F18FF2F8200359055 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1200B9A318FF2F8200359055 /* ios-xmpp-tigase-archive-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ios-xmpp-tigase-archive-Info.plist"; sourceTree = "<group>"; };
+		1200B9A518FF2F8200359055 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1200B9A718FF2F8200359055 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1200B9A918FF2F8200359055 /* ios-xmpp-tigase-archive-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-xmpp-tigase-archive-Prefix.pch"; sourceTree = "<group>"; };
+		1200B9AA18FF2F8200359055 /* SRMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRMAppDelegate.h; sourceTree = "<group>"; };
+		1200B9AB18FF2F8200359055 /* SRMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRMAppDelegate.m; sourceTree = "<group>"; };
+		1200B9AD18FF2F8200359055 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1200B9B318FF2F8300359055 /* ios-xmpp-tigase-archiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-xmpp-tigase-archiveTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1200B9B418FF2F8300359055 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1200B9BC18FF2F8300359055 /* ios-xmpp-tigase-archiveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ios-xmpp-tigase-archiveTests-Info.plist"; sourceTree = "<group>"; };
+		1200B9BE18FF2F8300359055 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1200B9C018FF2F8300359055 /* ios_xmpp_tigase_archiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_xmpp_tigase_archiveTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1200B99518FF2F8200359055 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1200B99E18FF2F8200359055 /* CoreGraphics.framework in Frameworks */,
+				1200B9A018FF2F8200359055 /* UIKit.framework in Frameworks */,
+				1200B99C18FF2F8200359055 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1200B9B018FF2F8300359055 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1200B9B518FF2F8300359055 /* XCTest.framework in Frameworks */,
+				1200B9B718FF2F8300359055 /* UIKit.framework in Frameworks */,
+				1200B9B618FF2F8300359055 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1200B98F18FF2F8200359055 = {
+			isa = PBXGroup;
+			children = (
+				1200B9A118FF2F8200359055 /* ios-xmpp-tigase-archive */,
+				1200B9BA18FF2F8300359055 /* ios-xmpp-tigase-archiveTests */,
+				1200B99A18FF2F8200359055 /* Frameworks */,
+				1200B99918FF2F8200359055 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1200B99918FF2F8200359055 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1200B99818FF2F8200359055 /* ios-xmpp-tigase-archive.app */,
+				1200B9B318FF2F8300359055 /* ios-xmpp-tigase-archiveTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1200B99A18FF2F8200359055 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1200B99B18FF2F8200359055 /* Foundation.framework */,
+				1200B99D18FF2F8200359055 /* CoreGraphics.framework */,
+				1200B99F18FF2F8200359055 /* UIKit.framework */,
+				1200B9B418FF2F8300359055 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1200B9A118FF2F8200359055 /* ios-xmpp-tigase-archive */ = {
+			isa = PBXGroup;
+			children = (
+				1200B9AA18FF2F8200359055 /* SRMAppDelegate.h */,
+				1200B9AB18FF2F8200359055 /* SRMAppDelegate.m */,
+				1200B9AD18FF2F8200359055 /* Images.xcassets */,
+				1200B9A218FF2F8200359055 /* Supporting Files */,
+			);
+			path = "ios-xmpp-tigase-archive";
+			sourceTree = "<group>";
+		};
+		1200B9A218FF2F8200359055 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1200B9A318FF2F8200359055 /* ios-xmpp-tigase-archive-Info.plist */,
+				1200B9A418FF2F8200359055 /* InfoPlist.strings */,
+				1200B9A718FF2F8200359055 /* main.m */,
+				1200B9A918FF2F8200359055 /* ios-xmpp-tigase-archive-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1200B9BA18FF2F8300359055 /* ios-xmpp-tigase-archiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				1200B9C018FF2F8300359055 /* ios_xmpp_tigase_archiveTests.m */,
+				1200B9BB18FF2F8300359055 /* Supporting Files */,
+			);
+			path = "ios-xmpp-tigase-archiveTests";
+			sourceTree = "<group>";
+		};
+		1200B9BB18FF2F8300359055 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1200B9BC18FF2F8300359055 /* ios-xmpp-tigase-archiveTests-Info.plist */,
+				1200B9BD18FF2F8300359055 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1200B99718FF2F8200359055 /* ios-xmpp-tigase-archive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1200B9C418FF2F8300359055 /* Build configuration list for PBXNativeTarget "ios-xmpp-tigase-archive" */;
+			buildPhases = (
+				1200B99418FF2F8200359055 /* Sources */,
+				1200B99518FF2F8200359055 /* Frameworks */,
+				1200B99618FF2F8200359055 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-xmpp-tigase-archive";
+			productName = "ios-xmpp-tigase-archive";
+			productReference = 1200B99818FF2F8200359055 /* ios-xmpp-tigase-archive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1200B9B218FF2F8300359055 /* ios-xmpp-tigase-archiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1200B9C718FF2F8300359055 /* Build configuration list for PBXNativeTarget "ios-xmpp-tigase-archiveTests" */;
+			buildPhases = (
+				1200B9AF18FF2F8300359055 /* Sources */,
+				1200B9B018FF2F8300359055 /* Frameworks */,
+				1200B9B118FF2F8300359055 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1200B9B918FF2F8300359055 /* PBXTargetDependency */,
+			);
+			name = "ios-xmpp-tigase-archiveTests";
+			productName = "ios-xmpp-tigase-archiveTests";
+			productReference = 1200B9B318FF2F8300359055 /* ios-xmpp-tigase-archiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1200B99018FF2F8200359055 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SRM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = SR;
+				TargetAttributes = {
+					1200B9B218FF2F8300359055 = {
+						TestTargetID = 1200B99718FF2F8200359055;
+					};
+				};
+			};
+			buildConfigurationList = 1200B99318FF2F8200359055 /* Build configuration list for PBXProject "ios-xmpp-tigase-archive" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1200B98F18FF2F8200359055;
+			productRefGroup = 1200B99918FF2F8200359055 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1200B99718FF2F8200359055 /* ios-xmpp-tigase-archive */,
+				1200B9B218FF2F8300359055 /* ios-xmpp-tigase-archiveTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1200B99618FF2F8200359055 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1200B9A618FF2F8200359055 /* InfoPlist.strings in Resources */,
+				1200B9AE18FF2F8200359055 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1200B9B118FF2F8300359055 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1200B9BF18FF2F8300359055 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1200B99418FF2F8200359055 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1200B9A818FF2F8200359055 /* main.m in Sources */,
+				1200B9AC18FF2F8200359055 /* SRMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1200B9AF18FF2F8300359055 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1200B9C118FF2F8300359055 /* ios_xmpp_tigase_archiveTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1200B9B918FF2F8300359055 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1200B99718FF2F8200359055 /* ios-xmpp-tigase-archive */;
+			targetProxy = 1200B9B818FF2F8300359055 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1200B9A418FF2F8200359055 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1200B9A518FF2F8200359055 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1200B9BD18FF2F8300359055 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1200B9BE18FF2F8300359055 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1200B9C218FF2F8300359055 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1200B9C318FF2F8300359055 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1200B9C518FF2F8300359055 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ios-xmpp-tigase-archive/ios-xmpp-tigase-archive-Prefix.pch";
+				INFOPLIST_FILE = "ios-xmpp-tigase-archive/ios-xmpp-tigase-archive-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1200B9C618FF2F8300359055 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ios-xmpp-tigase-archive/ios-xmpp-tigase-archive-Prefix.pch";
+				INFOPLIST_FILE = "ios-xmpp-tigase-archive/ios-xmpp-tigase-archive-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1200B9C818FF2F8300359055 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ios-xmpp-tigase-archive.app/ios-xmpp-tigase-archive";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ios-xmpp-tigase-archive/ios-xmpp-tigase-archive-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ios-xmpp-tigase-archiveTests/ios-xmpp-tigase-archiveTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1200B9C918FF2F8300359055 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ios-xmpp-tigase-archive.app/ios-xmpp-tigase-archive";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ios-xmpp-tigase-archive/ios-xmpp-tigase-archive-Prefix.pch";
+				INFOPLIST_FILE = "ios-xmpp-tigase-archiveTests/ios-xmpp-tigase-archiveTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1200B99318FF2F8200359055 /* Build configuration list for PBXProject "ios-xmpp-tigase-archive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1200B9C218FF2F8300359055 /* Debug */,
+				1200B9C318FF2F8300359055 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1200B9C418FF2F8300359055 /* Build configuration list for PBXNativeTarget "ios-xmpp-tigase-archive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1200B9C518FF2F8300359055 /* Debug */,
+				1200B9C618FF2F8300359055 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1200B9C718FF2F8300359055 /* Build configuration list for PBXNativeTarget "ios-xmpp-tigase-archiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1200B9C818FF2F8300359055 /* Debug */,
+				1200B9C918FF2F8300359055 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1200B99018FF2F8200359055 /* Project object */;
+}
