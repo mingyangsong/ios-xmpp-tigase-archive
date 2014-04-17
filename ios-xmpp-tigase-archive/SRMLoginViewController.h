@@ -10,4 +10,7 @@
 
 @interface SRMLoginViewController : UIViewController
 
+- (IBAction)loginClick:(id)sender;
+
+
 @end

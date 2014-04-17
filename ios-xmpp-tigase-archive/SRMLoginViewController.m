@@ -46,4 +46,8 @@
 }
 */
 
+- (IBAction)loginClick:(id)sender {
+     [self performSegueWithIdentifier:@"login_success" sender:sender];
+    
+}
 @end
