@@ -7,8 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMPPFramework.h"
 
 @interface SRMAppDelegate : UIResponder <UIApplicationDelegate>
+{
+    XMPPStream *xmppStream;
+    XMPPRoster *xmppRoster;
+    XMPPReconnect *xmppReconnect;
+    XMPPMessageArchivingCoreDataStorage *xmppMessageArchivingCoreDataStorage;
+    XMPPMessageArchiving *xmppMessageArchivingModule;
+}
+
+@property (nonatomic, strong) XMPPStream *xmppStream;
+@property (nonatomic, strong) XMPPRoster *xmppRoster;
+@property (nonatomic, strong) XMPPReconnect *xmppReconnect;
+@property (nonatomic, strong) XMPPMessageArchivingCoreDataStorage *xmppMessageArchivingCoreDataStorage;
+@property (nonatomic, strong) XMPPMessageArchiving *xmppMessageArchivingModule;
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const xmppUsername;
+extern NSString *const xmppassword;
+extern NSString *const xmppServer;
+
 @interface SRMSettings : NSObject
+
++(NSString *)getCurrentTime;
 
 @end

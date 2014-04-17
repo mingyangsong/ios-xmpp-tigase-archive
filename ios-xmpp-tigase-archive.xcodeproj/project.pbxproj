@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1281D3221900631A007E9AE1 /* SRMSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1281D3211900631A007E9AE1 /* SRMSettings.m */; };
+		1281D32519007BB6007E9AE1 /* SRMSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1281D32419007BB6007E9AE1 /* SRMSettings.m */; };
 		1293012B18FF43A000681833 /* XMPPAnonymousAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1293FFDD18FF43A000681833 /* XMPPAnonymousAuthentication.m */; };
 		1293012C18FF43A000681833 /* XMPPDeprecatedDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1293FFE018FF43A000681833 /* XMPPDeprecatedDigestAuthentication.m */; };
 		1293012D18FF43A000681833 /* XMPPDeprecatedPlainAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1293FFE318FF43A000681833 /* XMPPDeprecatedPlainAuthentication.m */; };
@@ -176,8 +176,8 @@
 /* Begin PBXFileReference section */
 		1281D31E190062DB007E9AE1 /* SRMMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMMessageDelegate.h; sourceTree = "<group>"; };
 		1281D31F190062F2007E9AE1 /* SRMChatDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMChatDelegate.h; sourceTree = "<group>"; };
-		1281D3201900631A007E9AE1 /* SRMSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMSettings.h; sourceTree = "<group>"; };
-		1281D3211900631A007E9AE1 /* SRMSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMSettings.m; sourceTree = "<group>"; };
+		1281D32319007BB6007E9AE1 /* SRMSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMSettings.h; sourceTree = "<group>"; };
+		1281D32419007BB6007E9AE1 /* SRMSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMSettings.m; sourceTree = "<group>"; };
 		1293000018FF43A000681833 /* XMPPIQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPIQ.h; sourceTree = "<group>"; };
 		1293000118FF43A000681833 /* XMPPIQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPIQ.m; sourceTree = "<group>"; };
 		1293000218FF43A000681833 /* XMPPJID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPJID.h; sourceTree = "<group>"; };
@@ -1237,8 +1237,8 @@
 				12930419190049DB00681833 /* SRMAddViewController.m */,
 				1281D31F190062F2007E9AE1 /* SRMChatDelegate.h */,
 				1281D31E190062DB007E9AE1 /* SRMMessageDelegate.h */,
-				1281D3201900631A007E9AE1 /* SRMSettings.h */,
-				1281D3211900631A007E9AE1 /* SRMSettings.m */,
+				1281D32319007BB6007E9AE1 /* SRMSettings.h */,
+				1281D32419007BB6007E9AE1 /* SRMSettings.m */,
 				1293FFBD18FF435100681833 /* Images.xcassets */,
 				129301AC18FF43A600681833 /* xmpp */,
 				1293FFB218FF435100681833 /* Supporting Files */,
@@ -1621,7 +1621,7 @@
 				1293019818FF43A000681833 /* GCDMulticastDelegate.m in Sources */,
 				1293018118FF43A000681833 /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,
 				1293014718FF43A000681833 /* XMPPUserCoreDataStorageObject.m in Sources */,
-				1281D3221900631A007E9AE1 /* SRMSettings.m in Sources */,
+				1281D32519007BB6007E9AE1 /* SRMSettings.m in Sources */,
 				1293015818FF43A000681833 /* XMPPRoomHybridStorage.m in Sources */,
 				1293015518FF43A000681833 /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
 				1293017718FF43A000681833 /* XMPPMessage+XEP_0085.m in Sources */,

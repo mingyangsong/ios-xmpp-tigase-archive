@@ -7,11 +7,21 @@
 //
 
 #import "SRMAppDelegate.h"
+#import "SRMSettings.h"
+#import "DDTTYLogger.h"
 
 @implementation SRMAppDelegate
+@synthesize xmppStream;
+@synthesize xmppRoster;
+@synthesize xmppReconnect;
+@synthesize xmppMessageArchivingCoreDataStorage;
+@synthesize xmppMessageArchivingModule;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[NSUserDefaults standardUserDefaults] setObject:@"chat.carbonhire.com" forKey:xmppServer];
+    // Open the raw XML log
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
     return YES;
 }
 
