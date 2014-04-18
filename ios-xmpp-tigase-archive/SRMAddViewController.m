@@ -7,6 +7,7 @@
 //
 
 #import "SRMAddViewController.h"
+#import "SRMAppDelegate.h"
 
 @interface SRMAddViewController ()
 
@@ -35,15 +36,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSString *_username = self.buddyTextField.text;
+    if(_username)
+    {
+         XMPPJID *jid = [XMPPJID jidWithString:[NSString stringWithFormat:@"%@@%@/ios", _username, [self appDelegate].server]];
+        [[[self appDelegate] xmppRoster] addUser:jid withNickname:_username];
+    }
 }
-*/
+
+- (SRMAppDelegate *)appDelegate
+{
+    return (SRMAppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 @end

@@ -80,7 +80,14 @@
         [[self appDelegate] connect];
     }
     
-    while (![[[self appDelegate] xmppStream] isConnected]) {
+//    while (![[[self appDelegate] xmppStream] isConnected])
+//    {
+//        NSLog(@"Wait Connect");
+//    }
+    
+    while ([[[self appDelegate] xmppStream] isDisconnected])
+    {
+        NSLog(@"Wait Connect");
     }
     
     if([[[self appDelegate]xmppStream] supportsInBandRegistration])
@@ -101,4 +108,18 @@
 {
     [self.view endEditing:YES];
 }
+
+- (IBAction)backToLogin:(UIStoryboardSegue *)segue
+{
+    [[self appDelegate] disconnect];
+    while ([[[self appDelegate] xmppStream] isConnected])
+    {
+        NSLog(@"Wait Disconnect");
+    }
+    while (![[[self appDelegate] xmppStream] isDisconnected])
+    {
+        NSLog(@"Wait Disconnect");
+    }
+}
+
 @end

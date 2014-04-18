@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SRMRequestDelegate.h"
 
-@interface SRMRequestsViewController : UIViewController
+@interface SRMRequestsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SRMRequestDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)backToRequests:(UIStoryboardSegue *)segue;
 
 @end

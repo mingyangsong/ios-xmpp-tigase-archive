@@ -10,4 +10,6 @@
 
 @protocol SRMMessageDelegate <NSObject>
 
+- (void)updateMessage;
+
 @end

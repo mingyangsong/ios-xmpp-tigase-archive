@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SRMMessageDelegate.h"
 
-@interface SRMMessageViewController : UIViewController
+@interface SRMMessageViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SRMMessageDelegate>
+
+
+@property (strong, nonatomic) IBOutlet UITextField *messageTextField;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
+@property (copy, nonatomic) NSString *title;
+
+- (IBAction)sendClick:(id)sender;
 
 @end

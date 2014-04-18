@@ -10,4 +10,6 @@
 
 @interface SRMAddViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *buddyTextField;
+
 @end

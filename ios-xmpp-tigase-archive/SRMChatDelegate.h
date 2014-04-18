@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SRMAppDelegate.h"
 
 @protocol SRMChatDelegate <NSObject>
+
+- (void)buddyUpdates;
 
 @end

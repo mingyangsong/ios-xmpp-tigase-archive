@@ -7,21 +7,32 @@
 //
 
 #import "SRMAppDelegate.h"
+#import "SRMChatDelegate.h"
+#import "SRMMessageDelegate.h"
+#import "SRMRequestDelegate.h"
 #import "DDTTYLogger.h"
 
 @implementation SRMAppDelegate
 @synthesize xmppStream;
 @synthesize xmppRoster;
+@synthesize xmppRosterStorage;
 @synthesize xmppReconnect;
 @synthesize xmppMessageArchivingCoreDataStorage;
 @synthesize xmppMessageArchivingModule;
+@synthesize SRMChatDelegate;
+@synthesize SRMMessageDelegate;
+@synthesize SRMRequestDelegate;
 @synthesize username;
 @synthesize password;
 @synthesize server;
+@synthesize _buddies;
+@synthesize _requests;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[NSUserDefaults standardUserDefaults] setObject:@"chat.carbonhire.com" forKey:xmppServer];
+    _buddies=[[NSMutableArray alloc]init];
+    _requests=[[NSMutableArray alloc]init];
     // Open the raw XML log
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     return YES;
@@ -68,6 +79,8 @@
     xmppReconnect = [[XMPPReconnect alloc]init];
     [xmppReconnect activate:self.xmppStream];
     
+    xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc]init];
+    xmppRoster = [[XMPPRoster alloc]initWithRosterStorage:xmppRosterStorage];
     [xmppRoster activate:self.xmppStream];
     [xmppRoster addDelegate:self delegateQueue:dispatch_get_main_queue()];
     
@@ -165,17 +178,34 @@
 
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
 {
-    
-}
-- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence
-{
-    
+    [SRMMessageDelegate updateMessage];
 }
 
-#pragma mark - XMPPRosterDelegate
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence
+{
+    NSString *presenceType = [presence type]; //online/offline
+    NSString *userId = [[sender myJID] user];
+    NSString *presenceFromUser = [[presence from] user];
+    
+    if (![presenceFromUser isEqualToString:userId])
+    {
+        if ([presenceType isEqualToString:@"available"] && ![_buddies containsObject:presenceFromUser])
+        {
+            [_buddies addObject:presenceFromUser];
+            [SRMChatDelegate buddyUpdates];
+        }
+        else if ([presenceType isEqualToString:@"unavailable"])
+        {
+            [_buddies removeObject:presenceFromUser];
+            [SRMChatDelegate buddyUpdates];
+        }
+    }
+}
+
 - (void)xmppRoster:(XMPPRoster *)sender didReceivePresenceSubscriptionRequest:(XMPPPresence *)presence
 {
-    
+    [_requests addObject:presence.fromStr];
+    [SRMChatDelegate buddyUpdates];
 }
 
 @end

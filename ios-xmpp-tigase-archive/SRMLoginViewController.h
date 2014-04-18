@@ -15,6 +15,6 @@
 
 - (IBAction)loginClick:(id)sender;
 - (IBAction)backgroundTap:(id)sender;
-
+- (IBAction)backToLogin:(UIStoryboardSegue *)segue;
 
 @end
