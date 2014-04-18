@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SRMLoginViewController : UIViewController
+@interface SRMLoginViewController : UIViewController <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
+
 
 - (IBAction)loginClick:(id)sender;
+- (IBAction)backgroundTap:(id)sender;
 
 
 @end

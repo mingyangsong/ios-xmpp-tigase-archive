@@ -16,6 +16,9 @@
     XMPPReconnect *xmppReconnect;
     XMPPMessageArchivingCoreDataStorage *xmppMessageArchivingCoreDataStorage;
     XMPPMessageArchiving *xmppMessageArchivingModule;
+    NSString *username;
+    NSString *password;
+    NSString *server;
 }
 
 @property (nonatomic, strong) XMPPStream *xmppStream;
@@ -23,7 +26,17 @@
 @property (nonatomic, strong) XMPPReconnect *xmppReconnect;
 @property (nonatomic, strong) XMPPMessageArchivingCoreDataStorage *xmppMessageArchivingCoreDataStorage;
 @property (nonatomic, strong) XMPPMessageArchiving *xmppMessageArchivingModule;
-
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, assign) id SRMChatDelegate;
+@property (nonatomic, assign) id SRMMessageDelegate;
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *password;
+@property (nonatomic, strong) NSString *server;
+
+-(BOOL)connect;
+-(void)disconnect;
+-(void)setupStream;
+-(void)goOnline;
+-(void)goOffline;
 
 @end

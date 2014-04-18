@@ -7,7 +7,6 @@
 //
 
 #import "SRMAppDelegate.h"
-#import "SRMSettings.h"
 #import "DDTTYLogger.h"
 
 @implementation SRMAppDelegate
@@ -16,6 +15,9 @@
 @synthesize xmppReconnect;
 @synthesize xmppMessageArchivingCoreDataStorage;
 @synthesize xmppMessageArchivingModule;
+@synthesize username;
+@synthesize password;
+@synthesize server;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -50,6 +52,130 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - xmpp
+- (void)setupStream
+{
+    xmppStream = [[XMPPStream alloc]init];
+    #if !TARGET_IPHONE_SIMULATOR
+    {
+        xmppStream.enableBackgroundingOnSocket = YES;
+    }
+    #endif
+    [xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    
+    xmppReconnect = [[XMPPReconnect alloc]init];
+    [xmppReconnect activate:self.xmppStream];
+    
+    [xmppRoster activate:self.xmppStream];
+    [xmppRoster addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    
+    xmppMessageArchivingCoreDataStorage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
+    xmppMessageArchivingModule = [[XMPPMessageArchiving alloc]initWithMessageArchivingStorage:xmppMessageArchivingCoreDataStorage];
+    [xmppMessageArchivingModule setClientSideMessageArchivingOnly:YES];
+    [xmppMessageArchivingModule activate:xmppStream];
+    [xmppMessageArchivingModule addDelegate:self delegateQueue:dispatch_get_main_queue()];
+}
+
+- (void)goOnline
+{
+    XMPPPresence *presence = [XMPPPresence presence];
+    [[self xmppStream] sendElement:presence];
+}
+
+- (void)goOffline
+{
+    XMPPPresence *presence = [XMPPPresence presenceWithType:@"unavailable"];
+    [[self xmppStream] sendElement:presence];
+}
+
+- (BOOL)connect
+{
+    [self setupStream];
+    
+    username = [[NSUserDefaults standardUserDefaults] stringForKey:xmppUsername];
+    password = [[NSUserDefaults standardUserDefaults] stringForKey:xmppPassword];
+    server = [[NSUserDefaults standardUserDefaults] stringForKey:xmppServer];
+    
+    if (![xmppStream isDisconnected]) {
+        return YES;
+    }
+    
+    if (username == nil || password == nil) {
+        return NO;
+    }
+    
+    XMPPJID *jid = [XMPPJID jidWithString:[NSString stringWithFormat:@"%@@%@/ios", username, server]];
+    [xmppStream setMyJID:jid];
+    
+    NSError *error;
+    if (![xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&error]) {
+        NSLog(@"my connected error : %@", error.description);
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)disconnect
+{
+    [self goOffline];
+    [xmppStream disconnect];
+}
+
+#pragma mark - XMPPStreamDelegate
+- (void)xmppStreamDidConnect:(XMPPStream *)sender
+{
+    NSError *error;
+    if (![self.xmppStream authenticateWithPassword:password error:&error])
+    {
+        NSLog(@"error authenticate : %@",error.description);
+    }
+}
+
+- (void)xmppStreamDidRegister:(XMPPStream *)sender
+{
+    NSError *error;
+    if (![self.xmppStream authenticateWithPassword:password error:&error])
+    {
+        NSLog(@"error authenticate : %@",error.description);
+    }
+    else
+    {
+        // Setup Server Side Message Archive
+        XMPPIQ *iq = [[XMPPIQ alloc] initWithType:@"set"];
+        [iq addAttributeWithName:@"id" stringValue:@"auto1"];
+        NSXMLElement *query = [NSXMLElement elementWithName:@"auto" xmlns:@"urn:xmpp:archive"];
+        [query addAttributeWithName:@"save" stringValue:@"true"];
+        [iq addChild:query];
+        [[self xmppStream] sendElement:iq];
+    }
+}
+
+- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender
+{
+    [self goOnline];
+}
+
+- (NSString *)xmppStream:(XMPPStream *)sender alternativeResourceForConflictingResource:(NSString *)conflictingResource
+{
+    return @"ios";
+}
+
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
+{
+    
+}
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence
+{
+    
+}
+
+#pragma mark - XMPPRosterDelegate
+- (void)xmppRoster:(XMPPRoster *)sender didReceivePresenceSubscriptionRequest:(XMPPPresence *)presence
+{
+    
 }
 
 @end

@@ -7,8 +7,11 @@
 //
 
 #import "SRMLoginViewController.h"
+#import "SRMAppDelegate.h"
 
 @interface SRMLoginViewController ()
+
+- (BOOL)informationValidate;
 
 @end
 
@@ -46,8 +49,56 @@
 }
 */
 
-- (IBAction)loginClick:(id)sender {
-     [self performSegueWithIdentifier:@"login_success" sender:sender];
+#pragma mark - my methods
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (SRMAppDelegate *)appDelegate
+{
+	return (SRMAppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+- (BOOL)informationValidate
+{
+    if (self.usernameTextField.text && self.passwordTextField.text )
+    {
+        [[NSUserDefaults standardUserDefaults]setObject:self.usernameTextField.text forKey:xmppUsername];
+        [[NSUserDefaults standardUserDefaults]setObject:self.passwordTextField.text forKey:xmppPassword];
+        return YES;
+    }
     
+    return NO;
+}
+
+- (IBAction)loginClick:(id)sender
+{
+    if ([self informationValidate])
+    {
+        [[self appDelegate] connect];
+    }
+    
+    while (![[[self appDelegate] xmppStream] isConnected]) {
+    }
+    
+    if([[[self appDelegate]xmppStream] supportsInBandRegistration])
+    {
+        NSError *error;
+        XMPPJID *jid = [XMPPJID jidWithString:[NSString stringWithFormat:@"%@@%@/ios", [[self appDelegate] username], [[self appDelegate] server]]];
+        [[[self appDelegate] xmppStream] setMyJID: jid];
+        if (![[self appDelegate].xmppStream registerWithPassword:self.passwordTextField.text error:&error])
+        {
+            NSLog(@"error authenticate : %@",error.description);
+        }
+    }
+    
+    [self performSegueWithIdentifier:@"login_success" sender:sender];
+}
+
+- (IBAction)backgroundTap:(id)sender
+{
+    [self.view endEditing:YES];
 }
 @end
