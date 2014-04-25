@@ -5,11 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>7732A349-195A-4CB2-8F89-003D56314CF3</string>
+	<string>F981EA7C-6AA8-4ECE-9A37-E3DDAEFCB010</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ios-xmpp-tigase-archive</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>08F643E9-844F-4CE7-931A-644B141ADFED</key>
+		<string>https://github.com/robbiehanson/XMPPFramework.git</string>
 		<key>407307EE-1E0B-4D63-942E-7DCAB624A6EF</key>
 		<string>ssh://bitbucket.org/carbonhire/ios-xmpp-tigase-archive.git</string>
 	</dict>
@@ -17,11 +19,13 @@
 	<string>ios-xmpp-tigase-archive.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>08F643E9-844F-4CE7-931A-644B141ADFED</key>
+		<string>../../ios-xmpp-tigase-archive/xmpp</string>
 		<key>407307EE-1E0B-4D63-942E-7DCAB624A6EF</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://bitbucket.org/carbonhire/ios-xmpp-tigase-archive.git</string>
+	<string>file:///Users/s/Documents/IOS/ios-xmpp-tigase-archive/ios-xmpp-tigase-archive.xcodeproj/project.xcworkspace/</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -35,6 +39,14 @@
 			<string>407307EE-1E0B-4D63-942E-7DCAB624A6EF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ios-xmpp-tigase-archive</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>08F643E9-844F-4CE7-931A-644B141ADFED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>xmpp</string>
 		</dict>
 	</array>
 </dict>
