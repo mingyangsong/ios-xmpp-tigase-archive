@@ -1458,6 +1458,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = SR;
 				TargetAttributes = {
+					1293FFA718FF435100681833 = {
+						DevelopmentTeam = 5PXSW8S5E4;
+					};
 					1293FFC218FF435100681833 = {
 						TestTargetID = 1293FFA718FF435100681833;
 					};
@@ -1765,14 +1768,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ios-xmpp-tigase-archive/ios-xmpp-tigase-archive-Prefix.pch";
 				INFOPLIST_FILE = "ios-xmpp-tigase-archive/ios-xmpp-tigase-archive-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ios-xmpp-tigase-archive/xmpp/Vendor/libidn",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1783,14 +1790,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ios-xmpp-tigase-archive/ios-xmpp-tigase-archive-Prefix.pch";
 				INFOPLIST_FILE = "ios-xmpp-tigase-archive/ios-xmpp-tigase-archive-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ios-xmpp-tigase-archive/xmpp/Vendor/libidn",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
